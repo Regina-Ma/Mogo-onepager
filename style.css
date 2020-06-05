@@ -1,0 +1,755 @@
+body {
+  width: 100%;
+}
+
+body .wrapper {
+  width: 65%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body .clearfix {
+  clear: both;
+  display: block;
+  height: 0;
+  width: 100%;
+}
+
+body header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(assets/backgrounds/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+}
+
+body header nav {
+  width: 100%;
+  height: 6vh;
+}
+
+body header nav p {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #FFFFFF;
+  vertical-align: bottom;
+  padding-top: 25px;
+}
+
+body header nav ul {
+  display: block;
+  float: right;
+  padding-top: 35px;
+}
+
+body header nav ul li {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+body header nav ul li a:hover {
+  color: #fce38a;
+  border-bottom: solid 2px #fce38a;
+  cursor: pointer;
+}
+
+body header nav ul li img {
+  width: 20px;
+  height: auto;
+}
+
+body header nav ul li:nth-child(6) a,
+body header nav ul li:last-child a {
+  border-bottom: none;
+}
+
+body header h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 72px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  text-transform: capitalize;
+}
+
+body header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 150px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+body header hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+  background-color: #FFFFFF;
+  margin: 6vh auto 5vh;
+}
+
+body header button {
+  display: block;
+  margin: 0 auto 12vh;
+  background-color: transparent;
+  border: 3px solid #FFFFFF;
+  padding: 10px 30px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+body header button:hover {
+  background-color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  padding: 10px 30px;
+  color: #f38181;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body header .section {
+  display: inline-block;
+  width: 24%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, right top, left top, from(#FFFFFF));
+  background: linear-gradient(to left, #FFFFFF);
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  padding-top: 25px;
+  margin: 0 1% 0 0;
+  font-size: 0;
+}
+
+body header .section a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+body header .section a span {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+body header .section:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#f38181));
+  background: linear-gradient(to right, #f38181);
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+}
+
+body .intro {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  font-size: 0;
+}
+
+body .intro .wrapper {
+  height: 75vh;
+  font-size: 0;
+}
+
+body .intro .wrapper h5 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+body .intro .wrapper h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+}
+
+body .intro .wrapper hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+}
+
+body .intro .wrapper p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+body .intro .wrapper div.images {
+  margin: 6vh auto 0;
+}
+
+body .intro .wrapper div.images .container {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  width: 32%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .intro .wrapper div.images .container .image {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  height: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .intro .wrapper div.images .container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#db7675), to(#e3cc7c));
+  background: linear-gradient(#db7675, #e3cc7c);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .intro .wrapper div.images .container .overlay .icon {
+  width: 35px;
+  height: auto;
+  margin: 9vh auto 0;
+}
+
+body .intro .wrapper div.images .container .overlay span {
+  display: block;
+  margin: 10px auto 0;
+}
+
+body .intro .wrapper div.images .container:nth-child(2) {
+  margin: 0 2% 0;
+}
+
+body .intro .wrapper div.images .container:hover {
+  -webkit-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  -webkit-box-shadow: 10px 10px #95e1d3;
+          box-shadow: 10px 10px #95e1d3;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .intro .wrapper div.images .container:hover .overlay {
+  opacity: .8;
+}
+
+body .intro ul {
+  width: 100%;
+  height: 25vh;
+  margin: 0 auto;
+  background-color: #95e1d3;
+}
+
+body .intro ul div {
+  width: 65%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+body .intro ul div li {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+  padding: 7vh 10px 7vh;
+  border-left: 0.5px solid #FFFFFF;
+}
+
+body .intro ul div li span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+body .intro ul div li p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 3vh;
+}
+
+body .intro ul div li:last-child {
+  border-right: 0.5px solid #FFFFFF;
+}
+
+body .services {
+  height: 75vh;
+  background-color: #FFFFFF;
+  font-size: 0;
+}
+
+body .services h5 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+body .services h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+}
+
+body .services hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+}
+
+body .services .top, body .services .bottom {
+  width: 100%;
+  display: block;
+  font-size: 0;
+}
+
+body .services .top div, body .services .bottom div {
+  width: 32%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  padding: 0px 0 50px;
+  font-size: 0;
+}
+
+body .services .top div img, body .services .top div .text, body .services .bottom div img, body .services .bottom div .text {
+  display: inline-block;
+  font-size: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body .services .top div img, body .services .bottom div img {
+  width: 25%;
+  max-width: 35px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+body .services .top div .text, body .services .bottom div .text {
+  display: inline-block;
+  width: 75%;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.2;
+}
+
+body .services .top div .text h6, body .services .bottom div .text h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  width: 100%;
+  padding-left: 10px;
+}
+
+body .services .top div .text p, body .services .bottom div .text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+  padding: 10px 0 0 10px;
+}
+
+body .services .top div:nth-child(2), body .services .bottom div:nth-child(2) {
+  margin: 0 2%;
+}
+
+body .services .top {
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 7vh;
+}
+
+body .services .bottom div {
+  padding: 50px 0 0px;
+}
+
+body .design {
+  height: 93vh;
+  width: 100%;
+  background-image: url(assets/backgrounds/design.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  vertical-align: bottom;
+  position: relative;
+}
+
+body .design h5 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+body .design h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+}
+
+body .design hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+}
+
+body .design .tablet {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+body .design .phone {
+  position: absolute;
+  left: 50%;
+  bottom: -7vh;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+}
+
+body .work {
+  height: 100vh;
+  margin-top: 7vh;
+}
+
+body .work h5 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+body .work h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+}
+
+body .work hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+}
+
+body .work p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+body .work .slider {
+  margin: 10vh auto 0;
+}
+
+body .testimonials {
+  height: 30vh;
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+body .testimonials .wrapper {
+  padding: 4vh 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .testimonials .wrapper .arrow, body .testimonials .wrapper .inside {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+body .testimonials .wrapper .arrow {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 85px;
+  height: 20px;
+}
+
+body .testimonials .wrapper .arrow.left {
+  padding: 0 50px 0 20px;
+}
+
+body .testimonials .wrapper .arrow.right {
+  padding: 0 20px 0 50px;
+}
+
+body .testimonials .wrapper .inside {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 79%;
+  height: 22vh;
+}
+
+body .testimonials .wrapper .inside .quote {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+  width: 25%;
+  max-width: 175px;
+  min-width: 100px;
+  height: auto;
+  padding: 5%;
+  border: 2.5px solid #95e1d3;
+}
+
+body .testimonials .wrapper .inside .text {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+  width: 75.5%;
+  height: 100%;
+  padding: 15px 0 15px 50px;
+}
+
+body .testimonials .wrapper .inside .text q {
+  font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  font-style: italic;
+  color: #999999;
+  text-align: justify;
+  line-height: 1.5;
+  width: 100%;
+}
+
+body .testimonials .wrapper .inside .text .name {
+  margin-top: 20px;
+  vertical-align: middle;
+}
+
+body .testimonials .wrapper .inside .text .name hr {
+  display: inline-block;
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+  margin: 0 0 6px;
+}
+
+body .testimonials .wrapper .inside .text .name h5 {
+  display: inline-block;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+  text-align: left;
+  padding: 0 0 0 15px;
+}
+
+body .team {
+  height: 100vh;
+}
+
+body .team h5 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #000000;
+  text-align: center;
+  padding-top: 8vh;
+}
+
+body .team h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+}
+
+body .team hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto 4vh;
+}
+
+body .team p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-align: center;
+  line-height: 1.5;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+body .team div.gallery {
+  margin: 6vh auto 0;
+}
+
+body .team div.gallery .container {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  width: 32%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .team div.gallery .container .image {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  height: auto;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .team div.gallery .container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#db7675), to(#e3cc7c));
+  background: linear-gradient(#db7675, #e3cc7c);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .team div.gallery .container .overlay .icon {
+  width: 35px;
+  height: auto;
+  margin: 9vh auto 0;
+}
+
+body .team div.gallery .container .overlay span {
+  display: block;
+  margin: 10px auto 0;
+}
+
+body .team div.gallery .container:nth-child(2) {
+  margin: 0 2% 0;
+}
+
+body .team div.gallery .container:hover {
+  -webkit-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  -webkit-box-shadow: 10px 10px #95e1d3;
+          box-shadow: 10px 10px #95e1d3;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+body .team div.gallery .container:hover .overlay {
+  opacity: .8;
+}
+/*# sourceMappingURL=style.css.map */
