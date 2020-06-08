@@ -1,15 +1,26 @@
+:root {
+  font-size: 10px;
+}
+
 body {
   width: 100%;
 }
 
-body .wrapper {
+.wrapper {
   width: 65%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-body header {
+.clearfix {
+  clear: both;
+  display: block;
+  height: 0;
+  width: 100%;
+}
+
+header {
   width: 100%;
   height: 100vh;
   background-image: url(assets/backgrounds/header.jpg);
@@ -19,139 +30,173 @@ body header {
   font-size: 0;
 }
 
-body header nav {
+header nav {
   width: 100%;
   height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
-body header nav p {
+header nav p {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   vertical-align: bottom;
-  padding-top: 25px;
+  padding-top: 0.85em;
 }
 
-body header nav ul {
+header nav ul {
+  font-size: 1.4rem;
   display: block;
   float: right;
-  padding-top: 35px;
 }
 
-body header nav ul li {
+header nav ul li {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 3em;
 }
 
-body header nav ul li a {
+header nav ul li a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
-  padding-bottom: 12px;
+  padding-bottom: 1em;
   text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-body header nav ul li a:hover {
+header nav ul li a:hover {
   color: #fce38a;
   border-bottom: solid 2px #fce38a;
   cursor: pointer;
 }
 
-body header nav ul li img {
-  width: 20px;
+header nav ul li img {
+  width: 1.4em;
   height: auto;
 }
 
-body header nav ul li:nth-child(6) a,
-body header nav ul li:last-child a {
+header nav ul li:nth-child(6) a,
+header nav ul li:last-child a {
   border-bottom: none;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-body header h2 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 72px;
-  color: #FFFFFF;
+header nav ul li:nth-child(6):hover,
+header nav ul li:last-child:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+header h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 7.2rem;
+  color: #ffffff;
   text-align: center;
-  padding-top: 15vh;
-  padding-bottom: 5vh;
+  padding-top: 1.5em;
   text-transform: capitalize;
 }
 
-body header h1 {
-  font-family: 'Montserrat', sans-serif;
+header h1 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 150px;
-  color: #FFFFFF;
+  font-size: 15rem;
+  padding-top: 0.35em;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
 }
 
-body header hr {
+header h1:last-of-type {
+  padding-top: 0.1em;
+}
+
+header hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
-  background-color: #FFFFFF;
+  margin: 4vh auto;
+  background-color: #ffffff;
   margin: 6vh auto 5vh;
 }
 
-body header button {
+header button {
   display: block;
-  margin: 0 auto 12vh;
+  margin: 0 auto;
   background-color: transparent;
-  border: 3px solid #FFFFFF;
-  padding: 10px 30px;
-  color: #FFFFFF;
+  border: 3px solid #ffffff;
+  padding: 0.7em 2.1em;
+  color: #ffffff;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-body header button:hover {
-  background-color: #FFFFFF;
-  border: 3px solid #FFFFFF;
-  padding: 10px 30px;
+header button:hover {
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 0.7em 2.1em;
   color: #f38181;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-body header .section {
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.8rem;
+  margin-top: 12vh;
+}
+
+header .menu .section {
   display: inline-block;
   width: 24%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: -webkit-gradient(linear, right top, left top, from(#FFFFFF));
-  background: linear-gradient(to left, #FFFFFF);
+  background: -webkit-gradient(linear, right top, left top, from(#ffffff));
+  background: linear-gradient(to left, #ffffff);
   background-repeat: no-repeat;
   background-size: 100% 3px;
-  padding-top: 25px;
-  margin: 0 1% 0 0;
+  padding-top: 2.5rem;
   font-size: 0;
 }
 
-body header .section a {
+header .menu .section a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-body header .section a span {
+header .menu .section a span {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
-body header .section:hover {
+header .menu .section:hover {
   cursor: pointer;
   background: -webkit-gradient(linear, left top, right top, from(#f38181));
   background: linear-gradient(to right, #f38181);
@@ -159,29 +204,29 @@ body header .section:hover {
   background-size: 100% 3px;
 }
 
-body .intro {
+.intro {
   width: 100%;
   height: 100vh;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 0;
 }
 
-body .intro .wrapper {
+.intro .wrapper {
   height: 75vh;
   font-size: 0;
 }
 
-body .intro .wrapper h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.intro .wrapper h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .intro .wrapper h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.intro .wrapper h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -189,17 +234,17 @@ body .intro .wrapper h4 {
   padding: 2vh 0 0;
 }
 
-body .intro .wrapper hr {
+.intro .wrapper hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .intro .wrapper p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.intro .wrapper p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -208,86 +253,91 @@ body .intro .wrapper p {
   margin: 0 auto;
 }
 
-body .intro .wrapper div.images {
+.intro .wrapper div.images {
   margin: 6vh auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .intro .wrapper div.images .container {
+.intro .wrapper div.images .container {
   margin: 0;
   display: inline-block;
   position: relative;
   width: 32%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .intro .wrapper div.images .container .image {
+.intro .wrapper div.images .container .image {
   width: 100%;
   opacity: 1;
   display: block;
   height: auto;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .intro .wrapper div.images .container .overlay {
+.intro .wrapper div.images .container .overlay {
   position: absolute;
   top: 0;
   left: 0;
   background: #000000;
   background: -webkit-gradient(linear, left top, left bottom, from(#db7675), to(#e3cc7c));
   background: linear-gradient(#db7675, #e3cc7c);
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   display: inline-block;
   vertical-align: middle;
 }
 
-body .intro .wrapper div.images .container .overlay .icon {
+.intro .wrapper div.images .container .overlay .icon {
   width: 35px;
   height: auto;
   margin: 9vh auto 0;
 }
 
-body .intro .wrapper div.images .container .overlay span {
+.intro .wrapper div.images .container .overlay span {
   display: block;
   margin: 10px auto 0;
 }
 
-body .intro .wrapper div.images .container:nth-child(2) {
-  margin: 0 2% 0;
-}
-
-body .intro .wrapper div.images .container:hover {
+.intro .wrapper div.images .container:hover {
   -webkit-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
   -webkit-box-shadow: 10px 10px #95e1d3;
           box-shadow: 10px 10px #95e1d3;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .intro .wrapper div.images .container:hover .overlay {
-  opacity: .8;
+.intro .wrapper div.images .container:hover .overlay {
+  opacity: 0.8;
 }
 
-body .intro ul {
+.intro ul {
   width: 100%;
   height: 25vh;
   margin: 0 auto;
   background-color: #95e1d3;
 }
 
-body .intro ul div {
+.intro ul div {
   width: 65%;
   height: 100%;
   max-width: 1200px;
@@ -295,7 +345,7 @@ body .intro ul div {
   font-size: 0;
 }
 
-body .intro ul div li {
+.intro ul div li {
   display: inline-block;
   text-align: center;
   width: 20%;
@@ -304,48 +354,48 @@ body .intro ul div li {
           box-sizing: border-box;
   vertical-align: middle;
   padding: 7vh 10px 7vh;
-  border-left: 0.5px solid #FFFFFF;
+  border-left: 0.5px solid #ffffff;
 }
 
-body .intro ul div li span {
-  font-family: 'Montserrat', sans-serif;
+.intro ul div li span {
+  font-family: "Montserrat", sans-serif;
   font-size: 72px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
-body .intro ul div li p {
-  font-family: 'Montserrat', sans-serif;
+.intro ul div li p {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   padding-top: 3vh;
 }
 
-body .intro ul div li:last-child {
-  border-right: 0.5px solid #FFFFFF;
+.intro ul div li:last-child {
+  border-right: 0.5px solid #ffffff;
 }
 
-body .services {
+.services {
   height: 75vh;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 0;
 }
 
-body .services h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.services h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .services h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.services h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -353,21 +403,23 @@ body .services h4 {
   padding: 2vh 0 0;
 }
 
-body .services hr {
+.services hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .services .top, body .services .bottom {
+.services .top,
+.services .bottom {
   width: 100%;
   display: block;
   font-size: 0;
 }
 
-body .services .top div, body .services .bottom div {
+.services .top div,
+.services .bottom div {
   width: 32%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -376,14 +428,18 @@ body .services .top div, body .services .bottom div {
   font-size: 0;
 }
 
-body .services .top div img, body .services .top div .text, body .services .bottom div img, body .services .bottom div .text {
+.services .top div img,
+.services .top div .text,
+.services .bottom div img,
+.services .bottom div .text {
   display: inline-block;
   font-size: 0;
   margin: 0 auto;
   padding: 0;
 }
 
-body .services .top div img, body .services .bottom div img {
+.services .top div img,
+.services .bottom div img {
   width: 25%;
   max-width: 35px;
   height: auto;
@@ -391,7 +447,8 @@ body .services .top div img, body .services .bottom div img {
   vertical-align: top;
 }
 
-body .services .top div .text, body .services .bottom div .text {
+.services .top div .text,
+.services .bottom div .text {
   display: inline-block;
   width: 75%;
   text-align: left;
@@ -399,8 +456,9 @@ body .services .top div .text, body .services .bottom div .text {
   line-height: 1.2;
 }
 
-body .services .top div .text h6, body .services .bottom div .text h6 {
-  font-family: 'Montserrat', sans-serif;
+.services .top div .text h6,
+.services .bottom div .text h6 {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #333;
@@ -409,9 +467,10 @@ body .services .top div .text h6, body .services .bottom div .text h6 {
   padding-left: 10px;
 }
 
-body .services .top div .text p, body .services .bottom div .text p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.services .top div .text p,
+.services .bottom div .text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -420,20 +479,21 @@ body .services .top div .text p, body .services .bottom div .text p {
   padding: 10px 0 0 10px;
 }
 
-body .services .top div:nth-child(2), body .services .bottom div:nth-child(2) {
+.services .top div:nth-child(2),
+.services .bottom div:nth-child(2) {
   margin: 0 2%;
 }
 
-body .services .top {
+.services .top {
   border-bottom: 1px solid #e5e5e5;
   padding-top: 7vh;
 }
 
-body .services .bottom div {
+.services .bottom div {
   padding: 50px 0 0px;
 }
 
-body .design {
+.design {
   height: 93vh;
   width: 100%;
   background-image: url(assets/backgrounds/design.jpg);
@@ -445,17 +505,17 @@ body .design {
   position: relative;
 }
 
-body .design h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.design h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .design h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.design h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -463,15 +523,15 @@ body .design h4 {
   padding: 2vh 0 0;
 }
 
-body .design hr {
+.design hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .design .tablet {
+.design .tablet {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -479,7 +539,7 @@ body .design .tablet {
           transform: translate(-50%, 0);
 }
 
-body .design .phone {
+.design .phone {
   position: absolute;
   left: 50%;
   bottom: -7vh;
@@ -487,22 +547,22 @@ body .design .phone {
           transform: translate(50%, 0);
 }
 
-body .work {
+.work {
   height: 100vh;
   margin-top: 7vh;
 }
 
-body .work h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.work h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .work h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.work h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -510,17 +570,17 @@ body .work h4 {
   padding: 2vh 0 0;
 }
 
-body .work hr {
+.work hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .work p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.work p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -529,51 +589,161 @@ body .work p {
   margin: 0 auto;
 }
 
-body .work .slider {
+.work .slider {
   margin: 10vh auto 0;
+  font-size: 0;
 }
 
-body .snippet {
+.work .slider img {
+  display: inline-block;
+  width: 49%;
+  height: auto;
+  margin-right: 1%;
+  vertical-align: top;
+}
+
+.work .slider .services {
+  display: inline-block;
+  width: 49%;
+  margin-left: 1%;
+  height: auto;
+  vertical-align: top;
+}
+
+.work .slider .services .first,
+.work .slider .services .second,
+.work .slider .services .third {
+  border: 1px solid #e5e5e5;
+  margin: 5px 0;
+}
+
+.work .slider .services .first .description,
+.work .slider .services .second .description,
+.work .slider .services .third .description {
+  width: 100%;
+  vertical-align: middle;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.work .slider .services .first .description img.icon,
+.work .slider .services .second .description img.icon,
+.work .slider .services .third .description img.icon {
+  float: left;
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.work .slider .services .first .description h5,
+.work .slider .services .second .description h5,
+.work .slider .services .third .description h5 {
+  float: left;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.work .slider .services .first .description img.arrow,
+.work .slider .services .second .description img.arrow,
+.work .slider .services .third .description img.arrow {
+  width: 20px;
+  height: auto;
+  padding: 0;
+  float: right;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 15px;
+}
+
+.work .slider .services .first p,
+.work .slider .services .second p,
+.work .slider .services .third p {
+  width: 100%;
+  height: 18vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.5;
+  font-style: italic;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.work .slider .services .first p::-webkit-scrollbar-track,
+.work .slider .services .second p::-webkit-scrollbar-track,
+.work .slider .services .third p::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+
+.work .slider .services .first p::-webkit-scrollbar,
+.work .slider .services .second p::-webkit-scrollbar,
+.work .slider .services .third p::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f8f8f8;
+}
+
+.work .slider .services .first p::-webkit-scrollbar-thumb,
+.work .slider .services .second p::-webkit-scrollbar-thumb,
+.work .slider .services .third p::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #95e1d3;
+}
+
+.snippet {
   height: 30vh;
   width: 100%;
   background-color: #f8f8f8;
 }
 
-body .snippet .wrapper {
+.snippet .wrapper {
   padding: 4vh 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body .snippet .wrapper .arrow, body .snippet .wrapper .inside {
+.snippet .wrapper .arrow,
+.snippet .wrapper .inside {
   display: inline-block;
   font-size: 0;
   vertical-align: middle;
 }
 
-body .snippet .wrapper .arrow {
+.snippet .wrapper .arrow {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 85px;
   height: 20px;
 }
 
-body .snippet .wrapper .arrow.left {
+.snippet .wrapper .arrow.left {
   padding: 0 50px 0 20px;
 }
 
-body .snippet .wrapper .arrow.right {
+.snippet .wrapper .arrow.right {
   padding: 0 20px 0 50px;
 }
 
-body .snippet .wrapper .inside {
+.snippet .wrapper .inside {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 79%;
   height: 22vh;
 }
 
-body .snippet .wrapper .inside .quote {
+.snippet .wrapper .inside .quote {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -586,7 +756,7 @@ body .snippet .wrapper .inside .quote {
   border: 2.5px solid #95e1d3;
 }
 
-body .snippet .wrapper .inside .text {
+.snippet .wrapper .inside .text {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -596,8 +766,8 @@ body .snippet .wrapper .inside .text {
   padding: 15px 0 15px 50px;
 }
 
-body .snippet .wrapper .inside .text q {
-  font-family: 'Roboto', sans-serif;
+.snippet .wrapper .inside .text q {
+  font-family: "Roboto", sans-serif;
   font-size: 23px;
   font-weight: 300;
   font-style: italic;
@@ -607,25 +777,25 @@ body .snippet .wrapper .inside .text q {
   width: 100%;
 }
 
-body .snippet .wrapper .inside .text .name {
+.snippet .wrapper .inside .text .name {
   margin-top: 20px;
   vertical-align: middle;
 }
 
-body .snippet .wrapper .inside .text .name hr {
+.snippet .wrapper .inside .text .name hr {
   display: inline-block;
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
   margin: 0 0 6px;
 }
 
-body .snippet .wrapper .inside .text .name h5 {
+.snippet .wrapper .inside .text .name h5 {
   display: inline-block;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
@@ -633,21 +803,21 @@ body .snippet .wrapper .inside .text .name h5 {
   padding: 0 0 0 15px;
 }
 
-body .team {
+.team {
   height: 100vh;
 }
 
-body .team h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.team h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .team h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.team h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -655,17 +825,17 @@ body .team h4 {
   padding: 2vh 0 0;
 }
 
-body .team hr {
+.team hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .team p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.team p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -674,52 +844,52 @@ body .team p {
   margin: 0 auto;
 }
 
-body .team div.gallery {
+.team div.gallery {
   margin: 8vh auto 0;
   font-size: 0;
 }
 
-body .team div.gallery .container {
+.team div.gallery .container {
   margin: 0;
   display: inline-block;
   position: relative;
   width: 32%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .team div.gallery .container .image {
+.team div.gallery .container .image {
   width: 100%;
   opacity: 1;
   display: block;
   height: auto;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .team div.gallery .container .overlay {
+.team div.gallery .container .overlay {
   position: absolute;
   top: 0;
   left: 0;
   background: #000000;
   background: -webkit-gradient(linear, left top, left bottom, from(#db7675), to(#e3cc7c));
   background: linear-gradient(#db7675, #e3cc7c);
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   display: inline-block;
   vertical-align: middle;
 }
 
-body .team div.gallery .container .social {
+.team div.gallery .container .social {
   display: block;
   margin: 0 auto;
   position: absolute;
@@ -733,7 +903,7 @@ body .team div.gallery .container .social {
   opacity: 0;
 }
 
-body .team div.gallery .container .social i {
+.team div.gallery .container .social i {
   font-size: 20px;
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -745,52 +915,52 @@ body .team div.gallery .container .social i {
   padding: 20px 0;
 }
 
-body .team div.gallery .container .social i.fa-facebook-f {
-  color: #FFFFFF;
+.team div.gallery .container .social i.fa-facebook-f {
+  color: #ffffff;
   background-color: #f38181;
 }
 
-body .team div.gallery .container .social i.other {
+.team div.gallery .container .social i.other {
   color: #f38181;
   background-color: #fce38a;
   border-left: 1px solid #f38181;
 }
 
-body .team div.gallery .container:nth-child(2) {
+.team div.gallery .container:nth-child(2) {
   margin: 0 2% 0;
 }
 
-body .team div.gallery .container:hover {
+.team div.gallery .container:hover {
   -webkit-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
   -webkit-box-shadow: 10px 10px #95e1d3;
           box-shadow: 10px 10px #95e1d3;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-body .team div.gallery .container:hover .overlay {
-  opacity: .8;
+.team div.gallery .container:hover .overlay {
+  opacity: 0.8;
 }
 
-body .team div.gallery .container:hover .social {
+.team div.gallery .container:hover .social {
   opacity: 1;
 }
 
-body .team div.description {
+.team div.description {
   margin: 3vh auto 0;
   font-size: 0;
 }
 
-body .team div.description .thirds {
+.team div.description .thirds {
   margin: 0;
   display: inline-block;
   vertical-align: top;
   width: 32%;
 }
 
-body .team div.description .thirds h5 {
-  font-family: 'Montserrat', sans-serif;
+.team div.description .thirds h5 {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #333;
@@ -799,9 +969,9 @@ body .team div.description .thirds h5 {
   padding: 0;
 }
 
-body .team div.description .thirds p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.team div.description .thirds p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -809,61 +979,57 @@ body .team div.description .thirds p {
   font-style: italic;
 }
 
-body .team div.description .thirds:nth-child(2) {
+.team div.description .thirds:nth-child(2) {
   margin: 0 2% 0;
 }
 
-body .badges {
+.badges {
   height: 25vh;
   width: 100%;
   background-color: #f8f8f8;
 }
 
-body .badges .wrapper {
+.badges .wrapper {
   font-size: 0;
-  padding: 6vh 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .badges .wrapper div {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+.badges .wrapper div {
   width: 10%;
-  display: inline-block;
-  vertical-align: middle;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 4%;
 }
 
-body .badges .wrapper div img {
-  text-align: center;
+.badges .wrapper div img {
+  width: 100%;
+  height: auto;
 }
 
-body .badges .wrapper div:first-child {
-  margin: 0 4% 0 0;
-}
-
-body .badges .wrapper div:last-child {
-  margin: 0 0 0 4%;
-}
-
-body .gallery .text {
+.gallery .text {
   height: 40vh;
 }
 
-body .gallery .text h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.gallery .text h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .gallery .text h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.gallery .text h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -871,17 +1037,17 @@ body .gallery .text h4 {
   padding: 2vh 0 0;
 }
 
-body .gallery .text hr {
+.gallery .text hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .gallery .text p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.gallery .text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -890,13 +1056,16 @@ body .gallery .text p {
   margin: 0 auto;
 }
 
-body .gallery .display {
+.gallery .display {
   height: 80vh;
   width: 100%;
   font-size: 0;
 }
 
-body .gallery .display .one, body .gallery .display .two, body .gallery .display .three, body .gallery .display .four {
+.gallery .display .one,
+.gallery .display .two,
+.gallery .display .three,
+.gallery .display .four {
   width: 25%;
   height: 100%;
   display: inline-block;
@@ -904,18 +1073,31 @@ body .gallery .display .one, body .gallery .display .two, body .gallery .display
   position: relative;
 }
 
-body .gallery .display .one img, body .gallery .display .two img, body .gallery .display .three img, body .gallery .display .four img {
+.gallery .display .one img,
+.gallery .display .two img,
+.gallery .display .three img,
+.gallery .display .four img {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
 
-body .gallery .display .one .top, body .gallery .display .one .bottom, body .gallery .display .two .top, body .gallery .display .two .bottom, body .gallery .display .four .top, body .gallery .display .four .bottom {
+.gallery .display .one .top,
+.gallery .display .one .bottom,
+.gallery .display .two .top,
+.gallery .display .two .bottom,
+.gallery .display .four .top,
+.gallery .display .four .bottom {
   height: 50%;
   position: relative;
 }
 
-body .gallery .display .one .top .overlay, body .gallery .display .one .bottom .overlay, body .gallery .display .two .top .overlay, body .gallery .display .two .bottom .overlay, body .gallery .display .four .top .overlay, body .gallery .display .four .bottom .overlay {
+.gallery .display .one .top .overlay,
+.gallery .display .one .bottom .overlay,
+.gallery .display .two .top .overlay,
+.gallery .display .two .bottom .overlay,
+.gallery .display .four .top .overlay,
+.gallery .display .four .bottom .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -924,45 +1106,60 @@ body .gallery .display .one .top .overlay, body .gallery .display .one .bottom .
   background: linear-gradient(#db7675, #e3cc7c);
   width: 100%;
   height: 100%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: middle;
 }
 
-body .gallery .display .one .top .overlay img.icon, body .gallery .display .one .bottom .overlay img.icon, body .gallery .display .two .top .overlay img.icon, body .gallery .display .two .bottom .overlay img.icon, body .gallery .display .four .top .overlay img.icon, body .gallery .display .four .bottom .overlay img.icon {
+.gallery .display .one .top .overlay img.icon,
+.gallery .display .one .bottom .overlay img.icon,
+.gallery .display .two .top .overlay img.icon,
+.gallery .display .two .bottom .overlay img.icon,
+.gallery .display .four .top .overlay img.icon,
+.gallery .display .four .bottom .overlay img.icon {
   display: block;
   width: 35px;
   height: auto;
   margin: 13vh auto 0;
 }
 
-body .gallery .display .one .top .overlay h5, body .gallery .display .one .bottom .overlay h5, body .gallery .display .two .top .overlay h5, body .gallery .display .two .bottom .overlay h5, body .gallery .display .four .top .overlay h5, body .gallery .display .four .bottom .overlay h5 {
+.gallery .display .one .top .overlay h5,
+.gallery .display .one .bottom .overlay h5,
+.gallery .display .two .top .overlay h5,
+.gallery .display .two .bottom .overlay h5,
+.gallery .display .four .top .overlay h5,
+.gallery .display .four .bottom .overlay h5 {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   padding: 2vh 0 0;
 }
 
-body .gallery .display .one .top .overlay p, body .gallery .display .one .bottom .overlay p, body .gallery .display .two .top .overlay p, body .gallery .display .two .bottom .overlay p, body .gallery .display .four .top .overlay p, body .gallery .display .four .bottom .overlay p {
+.gallery .display .one .top .overlay p,
+.gallery .display .one .bottom .overlay p,
+.gallery .display .two .top .overlay p,
+.gallery .display .two .bottom .overlay p,
+.gallery .display .four .top .overlay p,
+.gallery .display .four .bottom .overlay p {
   display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px 0 0;
   font-style: italic;
 }
 
-body .gallery .display .three > .overlay {
+.gallery .display .three > .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -971,95 +1168,96 @@ body .gallery .display .three > .overlay {
   background: linear-gradient(#db7675, #e3cc7c);
   width: 100%;
   height: 100%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: middle;
 }
 
-body .gallery .display .three > .overlay img.icon {
+.gallery .display .three > .overlay img.icon {
   display: block;
   width: 35px;
   height: auto;
   margin: 35vh auto 0;
 }
 
-body .gallery .display .three > .overlay h5 {
+.gallery .display .three > .overlay h5 {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   padding: 2vh 0 0;
 }
 
-body .gallery .display .three > .overlay p {
+.gallery .display .three > .overlay p {
   display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px 0 0;
   font-style: italic;
 }
 
-body .gallery .display .one > .top:hover .overlay,
-body .gallery .display .one > .bottom:hover .overlay,
-body .gallery .display .two > .top:hover .overlay,
-body .gallery .display .two > .bottom:hover .overlay,
-body .gallery .display .three:hover .overlay,
-body .gallery .display .four > .top:hover .overlay,
-body .gallery .display .four > .bottom:hover .overlay {
-  opacity: .8;
+.gallery .display .one > .top:hover .overlay,
+.gallery .display .one > .bottom:hover .overlay,
+.gallery .display .two > .top:hover .overlay,
+.gallery .display .two > .bottom:hover .overlay,
+.gallery .display .three:hover .overlay,
+.gallery .display .four > .top:hover .overlay,
+.gallery .display .four > .bottom:hover .overlay {
+  opacity: 0.8;
 }
 
-body .small {
+.small {
   height: 30vh;
   width: 100%;
   background-color: #f8f8f8;
 }
 
-body .small .wrapper {
+.small .wrapper {
   padding: 4vh 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body .small .wrapper .arrow, body .small .wrapper .inside {
+.small .wrapper .arrow,
+.small .wrapper .inside {
   display: inline-block;
   font-size: 0;
   vertical-align: middle;
 }
 
-body .small .wrapper .arrow {
+.small .wrapper .arrow {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 85px;
   height: 20px;
 }
 
-body .small .wrapper .arrow.left {
+.small .wrapper .arrow.left {
   padding: 0 50px 0 20px;
 }
 
-body .small .wrapper .arrow.right {
+.small .wrapper .arrow.right {
   padding: 0 20px 0 50px;
 }
 
-body .small .wrapper .inside {
+.small .wrapper .inside {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 79%;
   height: 22vh;
 }
 
-body .small .wrapper .inside .client {
+.small .wrapper .inside .client {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1072,7 +1270,7 @@ body .small .wrapper .inside .client {
   border-radius: 50%;
 }
 
-body .small .wrapper .inside .text {
+.small .wrapper .inside .text {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1082,8 +1280,8 @@ body .small .wrapper .inside .text {
   padding: 15px 0 15px 50px;
 }
 
-body .small .wrapper .inside .text q {
-  font-family: 'Roboto', sans-serif;
+.small .wrapper .inside .text q {
+  font-family: "Roboto", sans-serif;
   font-size: 23px;
   font-weight: 300;
   font-style: italic;
@@ -1093,25 +1291,25 @@ body .small .wrapper .inside .text q {
   width: 100%;
 }
 
-body .small .wrapper .inside .text .name {
+.small .wrapper .inside .text .name {
   margin-top: 20px;
   vertical-align: middle;
 }
 
-body .small .wrapper .inside .text .name hr {
+.small .wrapper .inside .text .name hr {
   display: inline-block;
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
   margin: 0 0 6px;
 }
 
-body .small .wrapper .inside .text .name h5 {
+.small .wrapper .inside .text .name h5 {
   display: inline-block;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
@@ -1119,7 +1317,7 @@ body .small .wrapper .inside .text .name h5 {
   padding: 0 0 0 15px;
 }
 
-body .testimonials {
+.testimonials {
   height: 100vh;
   width: 100%;
   background-image: url(assets/backgrounds/clients.jpg);
@@ -1129,17 +1327,17 @@ body .testimonials {
   font-size: 0;
 }
 
-body .testimonials h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.testimonials h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .testimonials h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.testimonials h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -1147,15 +1345,15 @@ body .testimonials h4 {
   padding: 2vh 0 0;
 }
 
-body .testimonials hr {
+.testimonials hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .testimonials .client {
+.testimonials .client {
   width: 50%;
   display: inline-block;
   font-size: 0;
@@ -1164,7 +1362,7 @@ body .testimonials .client {
   padding: 10vh 20px 20px;
 }
 
-body .testimonials .client img {
+.testimonials .client img {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1176,7 +1374,7 @@ body .testimonials .client img {
   border-radius: 50%;
 }
 
-body .testimonials .client .description {
+.testimonials .client .description {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1186,8 +1384,8 @@ body .testimonials .client .description {
   padding-left: 30px;
 }
 
-body .testimonials .client .description h5 {
-  font-family: 'Montserrat', sans-serif;
+.testimonials .client .description h5 {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #333;
@@ -1196,9 +1394,9 @@ body .testimonials .client .description h5 {
   padding: 0;
 }
 
-body .testimonials .client .description p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+.testimonials .client .description p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   color: #999999;
   text-align: center;
   line-height: 1.5;
@@ -1207,18 +1405,18 @@ body .testimonials .client .description p {
   text-align: left;
 }
 
-body .testimonials .client .description hr {
+.testimonials .client .description hr {
   display: block;
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
   margin: 15px 0;
 }
 
-body .testimonials .client .description q {
-  font-family: 'Roboto', sans-serif;
+.testimonials .client .description q {
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
   font-style: italic;
@@ -1228,24 +1426,24 @@ body .testimonials .client .description q {
   width: 100%;
 }
 
-body .blog {
-  height: 100vh;
+.blog {
+  height: 80vh;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-size: 0;
 }
 
-body .blog h5 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 24px;
+.blog h5 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
   color: #000000;
   text-align: center;
   padding-top: 8vh;
 }
 
-body .blog h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+.blog h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   color: #000000;
   text-align: center;
@@ -1253,22 +1451,463 @@ body .blog h4 {
   padding: 2vh 0 0;
 }
 
-body .blog hr {
+.blog hr {
   border: none;
-  width: 60px;
+  width: 6rem;
   height: 3px;
   background-color: #f38181;
-  margin: 4vh auto 4vh;
+  margin: 4vh auto;
 }
 
-body .blog .thirds {
+.blog .thirds {
   margin: 0;
   display: inline-block;
   vertical-align: top;
   width: 32%;
 }
 
-body .blog .thirds:nth-child(2) {
+.blog .thirds:nth-of-type(2) {
   margin: 0 2% 0;
+}
+
+.blog .thirds .picture {
+  position: relative;
+}
+
+.blog .thirds .picture img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.blog .thirds .picture .date {
+  position: absolute;
+  bottom: 10px;
+  left: -10px;
+  padding: 15px;
+  background-color: #95e1d3;
+}
+
+.blog .thirds .picture .date span {
+  color: #ffffff;
+  display: block;
+}
+
+.blog .thirds .picture .date span:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.blog .thirds .picture .date span:last-child {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.blog .thirds .texts h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #333;
+  padding-top: 20px;
+}
+
+.blog .thirds .texts p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-align: left;
+  line-height: 1.2;
+  padding: 20px 0px;
+}
+
+.blog .thirds hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
+.blog .thirds .stats {
+  margin-top: 20px;
+}
+
+.blog .thirds .stats img {
+  display: inline-block;
+}
+
+.blog .thirds .stats img:last-of-type {
+  margin-left: 15px;
+}
+
+.blog .thirds .stats span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  font-style: italic;
+}
+
+.map {
+  height: 20vh;
+  width: 100%;
+  background-image: url(assets/backgrounds/map.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 5vh;
+}
+
+.map h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2vh 0 0;
+  color: #f38181;
+}
+
+.map hr {
+  border: none;
+  width: 6rem;
+  height: 3px;
+  background-color: #f38181;
+  margin: 4vh auto;
+  margin: 2vh auto;
+}
+
+footer {
+  height: 52vh;
+  background-color: #f8f8f8;
+  padding-top: 7vh;
+  font-size: 0;
+}
+
+footer .top {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 auto;
+  font-size: 0;
+  padding-bottom: 5vh;
+}
+
+footer .top .left {
+  width: 38%;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer .top .left h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 43px;
+  font-weight: 700;
+  color: #ccc;
+}
+
+footer .top .left p {
+  padding-top: 4vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+}
+
+footer .top .left h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  margin-top: 5vh;
+}
+
+footer .top .left h4 span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer .top .left hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #e5e5e5;
+  margin: 18px auto;
+}
+
+footer .top .left h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #999999;
+  font-style: italic;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+footer .top .left .social {
+  display: inline-block;
+  vertical-align: top;
+  color: #95e1d3;
+  margin-left: 20px;
+}
+
+footer .top .left .social i {
+  font-size: 18px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30px;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px 0 0;
+}
+
+footer .top .left input {
+  display: inline-block;
+  margin-top: 4vh;
+}
+
+footer .top .left input:first-of-type {
+  width: 40%;
+  border: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  padding: 15px;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .left input:first-of-type::-webkit-input-placeholder {
+  color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .left input:first-of-type:-ms-input-placeholder {
+  color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .left input:first-of-type::-ms-input-placeholder {
+  color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .left input:first-of-type::placeholder {
+  color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .left input:last-of-type {
+  width: 30%;
+  border: none;
+  background-color: #95e1d3;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer .top .middle {
+  width: 37%;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30px 0;
+}
+
+footer .top .middle h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  padding: 1vh 0 6vh;
+}
+
+footer .top .middle .post {
+  padding: 15px 0;
+  font-size: 0;
+}
+
+footer .top .middle .post:first-of-type {
+  padding: 0 0 15px;
+}
+
+footer .top .middle .post img {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: auto;
+}
+
+footer .top .middle .post .texts {
+  display: inline-block;
+  width: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 0 0 15px;
+}
+
+footer .top .middle .post .texts h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+footer .top .middle .post .texts span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #999999;
+  font-style: italic;
+  padding-top: 10px;
+}
+
+footer .top .right {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer .top .right h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-transform: uppercase;
+  padding: 1vh 0 6vh;
+}
+
+footer .top .right .pics {
+  font-size: 0;
+}
+
+footer .top .right .pics img {
+  margin: 1px;
+}
+
+footer .top .right p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #333;
+  font-style: italic;
+  padding-top: 20px;
+}
+
+footer .bottom {
+  text-align: center;
+  margin: 20px 0;
+}
+
+footer .bottom p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+}
+
+footer .bottom p span {
+  color: #f38181;
+}
+
+@media (max-width: 1600px) {
+  .wrapper {
+    width: 80%;
+    max-width: 1280px;
+  }
+  .intro ul div {
+    width: 80%;
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 85%;
+    max-width: 1105px;
+  }
+  header nav {
+    height: 10vh;
+  }
+  header nav p {
+    padding-top: 1.7em;
+  }
+  header h1 {
+    font-size: 13rem;
+  }
+  header .menu {
+    margin-top: 13vh;
+  }
+  .intro ul div {
+    width: 85%;
+    max-width: 1105px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+  }
+  .intro ul div {
+    width: 90%;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    font-size: 9px;
+  }
+  header h1 {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav {
+    height: 8vh;
+  }
+  header nav p {
+    padding-top: 2em;
+  }
+  header h1 {
+    font-size: 13rem;
+  }
+  header .menu {
+    margin-top: 15vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
